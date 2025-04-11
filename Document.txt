@@ -1,0 +1,93 @@
+--- DOCUMENTS / HUMBLE CODE ---
+
+1) Instruction to Humble Code
+
+In Humble Code, you are splitting your codes by newlines, end your code by endAll and start your code by bootstart, or just start it manually.
+
+To start writing the code, you would eventually need to write one of these in start of your code:
+
+1) Using bs (bootstart)
+
+Using bs you can do a start function easily. Example:
+
+bs
+...
+
+Also there is manual options in bs:
+
+bs --bits 16 --workloc 0x7c00
+
+You can add these arguements to manualize these two settings, these are the settings that comes as default.
+
+2) Manual Way (workloc, bits)
+
+You can use "workloc" and "bits" to start your code. Example:
+
+workloc 0x7c00
+bits 16
+...
+
+(BITS can be setted as 16, 32 or 64.)
+
+
+----------
+
+In Humble Code, it's easier to print out texts than Assembly. Because you can just do a bootloader that types "Hello, World!" in maximum 5 lines!
+
+There are several ways of printing "Hello, World" in Humble Code.
+
+1) Shortest Way:
+
+You can use "allpt" function to enable printtext auto/. Example:
+
+bs
+allpt "Hello, World!"
+endall
+
+2) Using printtext:
+
+By enabling printtext you could also type Hello, World. Example:
+
+bs
+enable printtext
+printtext "Hello, World!"
+endall
+
+3) Literally making everything manual
+
+If you really wanna make everything manual, you could lso use __asm__ and __endasm__ to print "Hello, World!"
+
+(Not recommended if you're not working with a well advanced file.)
+
+----------
+
+So, we did see everything. What about variable system? All programming languages has their own variable system.
+
+And Humble Code also has that. But the thing is that it DOESN'T gets written to Assembly code and gets saved locally in compiler code.
+
+Example usage:
+
+var VariableName Value
+
+Here, VariableName is the stored Variable Name and Value is it's value.
+
+For example:
+
+var text "Hello, World!"
+var number 1+2
+
+Here, number is saved as 3 (evalled) and text is saved as "Hello, World!"
+
+Also, you can use variables to print out variable values.
+
+For example:
+
+bs
+var name "ItsKayraa"
+printtext f"Hello, {{name}}!"
+endall
+
+Here, you can see that you would NEED TO put 'f' at start of quotes and use {{<variablename>}} to replace place with variable value.
+
+-----------
+(coming soon it's late frfr)
