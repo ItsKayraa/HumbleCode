@@ -8,4 +8,4 @@ This Programming language has very easy to understand syntax where most of the p
 
 WARNING!
 
-This compiler is not done yet. This isn't the full ersion or the best version. Please give me comments on how could I improve things!
+This compiler is not done yet. This isn't the full version or the best version. Please give me comments on how could I improve things!
